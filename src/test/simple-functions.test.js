@@ -12,7 +12,7 @@ const {
 describe('summRec', () => {
   test('summRec(1)(2)(3)()', () => {
     expect(summRec(1)(2)(3)()).toBe(6);
-  });k
+  });
 
   test('summRec(0)(-2)(1)()', () => {
     expect(summRec(0)(-2)(1)()).toBe(-1);
