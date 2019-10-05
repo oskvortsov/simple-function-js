@@ -44,7 +44,6 @@ function fib(number) {
   return number !== 0 ? b : 0;
 }
 
-
 // Проверка на сортировку
 function isSorted(arr) {
   if (arr.length < 2) return true;
@@ -56,7 +55,7 @@ function isSorted(arr) {
       direct = arr[index - 1] <= arr[index];
     }
 
-    if ((arr[index - 1] < arr[index]) !== direct && direct !== null) {
+    if (arr[index - 1] < arr[index] !== direct && direct !== null) {
       return false;
     }
 
@@ -73,7 +72,6 @@ function filter(arr, predicate) {
   return result;
 }
 
-
 // совй редьюс
 function reduce(arr, fn, acc = null) {
   arr.forEach((item, index) => {
@@ -82,7 +80,6 @@ function reduce(arr, fn, acc = null) {
 
   return acc;
 }
-
 
 module.exports = {
   summRec,

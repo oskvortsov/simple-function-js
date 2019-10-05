@@ -61,7 +61,6 @@ describe('factorial', () => {
   });
 });
 
-
 describe('fib', () => {
   test('fib(0)', () => {
     expect(fib(0)).toBe(0);
@@ -120,7 +119,12 @@ describe('filter', () => {
   });
 
   test('filter([1, 2, 3, 4, 5, 6, 7, 8], n => n % 2 === 0))', () => {
-    expect(filter([1, 2, 3, 4, 5, 6, 7, 8], n => n % 2 === 0)).toEqual([2, 4, 6, 8]);
+    expect(filter([1, 2, 3, 4, 5, 6, 7, 8], n => n % 2 === 0)).toEqual([
+      2,
+      4,
+      6,
+      8,
+    ]);
   });
 });
 
@@ -140,7 +144,10 @@ describe('reduce', () => {
     }
 
     expect(reduce(['a', 'b', 'c', 'd'], predicate, {})).toEqual({
-      a: 1, b: 2, c: 3, d: 4,
+      a: 1,
+      b: 2,
+      c: 3,
+      d: 4,
     });
   });
 
