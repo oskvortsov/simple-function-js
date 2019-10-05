@@ -48,11 +48,22 @@ function fib(number) {
 // Проверка на сортировку
 function isSorted(arr) {
   if (arr.length < 2) return true;
-  const direct = arr[0] < arr[1] ? 'up' : 'down';
-  return !arr.some((_, index) => {
-    const isDirect = arr[index - 1] < arr[index];
-    return index > 1 && ((!isDirect && direct === 'up') || (isDirect && direct === 'down'));
-  });
+  let index = 1;
+  let direct = null;
+
+  do {
+    if (arr[index - 1] !== arr[index] && direct === null) {
+      direct = arr[index - 1] <= arr[index];
+    }
+
+    if ((arr[index - 1] < arr[index]) !== direct && direct !== null) {
+      return false;
+    }
+
+    index++;
+  } while (arr.length > index);
+
+  return true;
 }
 
 // свой фильтер
