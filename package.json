@@ -22,5 +22,19 @@
   },
   "jest": {
     "transform": {}
+  },
+  "lint-staged": {
+    "(src)+/**/*.+(js)": [
+      "prettier --write --list-different",
+      "test",
+      "eslint \"src/**/*.{js}\"",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "lint-staged": "^9.4.1",
+    "prettier": "^1.18.2"
   }
 }
