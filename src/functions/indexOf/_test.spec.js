@@ -1,11 +1,11 @@
-const { reverse } = require('./index');
+const { indexOf } = require('./index');
 
-describe('reverse', () => {
-  test('reverse("abs") => "sba', () => {
-    expect(reverse('abs')).toBe('sba');
+describe('indexOf', () => {
+  test('indexOf([1, 2, 3], 1)  => 1', () => {
+    expect(indexOf([1, 2, 3], 1)).toBe(0);
   });
 
-  test('reverse("") => "', () => {
-    expect(reverse('')).toBe('');
+  test('indexOf([1, 2, 3], 4)  => -1', () => {
+    expect(indexOf([1, 2, 3], 4)).toBe(-1);
   });
 });

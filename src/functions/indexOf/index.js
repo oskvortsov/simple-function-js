@@ -1,11 +1,12 @@
-function reverse(stroke) {
-  let newStroke = '';
-
-  for (let i = stroke.length - 1; i >= 0; i--) newStroke += stroke[i];
-
-  return newStroke;
+function indexOf(arr, searchObj) {
+  let index = 0;
+  while (index < arr.length) {
+    if (arr[index] === searchObj) return index;
+    index++;
+  }
+  return -1;
 }
 
 module.exports = {
-  reverse,
+  indexOf,
 };
